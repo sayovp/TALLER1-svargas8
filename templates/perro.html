@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taller 2</title>
+</head>
+<body>
+    <P>PUNTO 1</P>
+    {% if perros %}
+        {% for perroGuar in perros%}
+        <p>Nombre : {{perroGuar.Nombre}}, Raza : {{perroGuar.Raza}}, Edad: {{perroGuar.Edad}}</p>
+        {% endfor %}
+        <p>Hay {{ cantperro }}  perros llamados Lassie</p>
+    {% else %}
+    <p>no hay perros con ese nombre</p>
+    {% endif %}
+    <br>
+    
+    <p>PUNTO 2</p>
+    {% if perrosMario %}
+        {% for perrosDMario in perrosMario%}
+        <p>Nombre : {{perrosDMario.Nombre}}, Raza : {{perrosDMario.Raza}}, Edad: {{perrosDMario.Edad}}</p>
+        {% endfor %}
+    {% else %}
+    <p>Mario NO tiene perros para cuidar</p>
+    {% endif %}
+</body>
+</html>
